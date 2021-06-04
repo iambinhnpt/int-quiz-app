@@ -1,21 +1,13 @@
 import React from "react";
-import { List, Typography } from "antd";
 
 export default function Advisors(props) {
+  const categories = props.item.categoriesCollection.items;
   return (
-    <div>
-      {props.item.displayName}
-      <List
-       size="small"
-        header={<div>Category: </div>}
-        bordered
-        dataSource={props.item.categoriesCollection.items}
-        renderItem={(item) => (
-          <List.Item>
-            <Typography.Text mark>[Category]</Typography.Text> {item.displayName}
-          </List.Item>
-        )}
-      />
-    </div>
+    <>
+      <td>{props.item.displayName}</td>
+      <td>{categories.map(item=>{
+        return <p>{item.displayName}</p>
+      })}</td>
+    </>
   );
 }

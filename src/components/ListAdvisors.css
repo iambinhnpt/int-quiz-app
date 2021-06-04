@@ -1,0 +1,27 @@
+.advisors{
+    width: 100%;
+    max-width: 1040px;
+    margin: 50px auto;
+  
+}
+.advisors__table{
+    margin: 0 auto;
+    font-size: 16px;
+}
+tr, th, td{
+    border: 1px solid #ccc;
+    padding: 5px 20px;
+}
+th{
+    color: darkgreen;
+    background: lightgreen;
+}
+td{
+    background: lightyellow;
+}
+th:first-child, td:first-child{
+    color: white;
+    background: darkslategrey;
+    font-size: 20px;
+    text-align: center;
+}
